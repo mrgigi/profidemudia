@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Book, ExternalLink, Download, FileText, ChevronDown, List, ScrollText, Image as ImageIcon } from 'lucide-react';
 import { BANNER_IMAGE } from '../constants';
@@ -13,7 +12,7 @@ const PublicationSection: React.FC<{
   const [isOpen, setIsOpen] = useState(initiallyOpen);
 
   return (
-    <div className="mb-6 group">
+    <div className="mb-6 group text-left">
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-6 md:p-8 bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-white/10 transition-all text-left shadow-xl"
@@ -39,7 +38,7 @@ const PublicationSection: React.FC<{
             ></div>
           )}
           <div className="relative z-10">
-            <div className="prose prose-invert prose-base md:prose-lg max-w-none text-slate-200 leading-relaxed font-light space-y-6">
+            <div className="prose prose-invert prose-base md:prose-lg max-w-none text-slate-200 leading-relaxed font-light space-y-6 text-justify">
               {children}
             </div>
             
@@ -78,7 +77,7 @@ const Publications: React.FC = () => {
           <span className="text-indigo-400 font-semibold tracking-widest uppercase text-xs mb-3 block">Scientific Bibliography</span>
           <h1 className="text-3xl md:text-6xl font-bold text-white serif mb-6 drop-shadow-2xl">Published Articles</h1>
           <div className="w-20 md:w-24 h-1.5 bg-indigo-500 mb-8 rounded-full"></div>
-          <p className="text-lg md:text-xl text-indigo-100 font-light max-w-2xl leading-relaxed italic border-l-4 border-indigo-500/50 pl-6">
+          <p className="text-lg md:text-xl text-indigo-100 font-light max-w-2xl leading-relaxed italic border-l-4 border-indigo-500/50 pl-6 text-justify">
             A chronological record of over three decades of peer-reviewed research, exploring psychopathology, 
             cultural dynamics, and clinical interventions in Africa and beyond.
           </p>
@@ -218,7 +217,7 @@ const Publications: React.FC = () => {
         </PublicationSection>
 
         {/* BOOK CHAPTERS SECTIONS */}
-        <div className="mt-20 mb-10">
+        <div className="mt-20 mb-10 text-left">
           <h2 className="text-3xl md:text-5xl font-bold text-white serif mb-6 drop-shadow-2xl">Chapters in Books</h2>
           <div className="w-20 md:w-24 h-1.5 bg-indigo-500 mb-8 rounded-full"></div>
         </div>
@@ -242,7 +241,7 @@ const Publications: React.FC = () => {
         </PublicationSection>
 
         {/* CO-EDITED BOOKS SECTION */}
-        <div className="mt-20 mb-10">
+        <div className="mt-20 mb-10 text-left">
           <h2 className="text-3xl md:text-5xl font-bold text-white serif mb-6 drop-shadow-2xl">Co-edited Books</h2>
           <div className="w-20 md:w-24 h-1.5 bg-indigo-500 mb-8 rounded-full"></div>
         </div>
@@ -254,10 +253,10 @@ const Publications: React.FC = () => {
         </PublicationSection>
 
         {/* PUBLICATIONS: BOOKS Visual Section (KEEPING EXISTING CUSTOM VISUALS) */}
-        <div className="mt-32 mb-16">
+        <div className="mt-32 mb-16 text-left">
           <h2 className="text-3xl md:text-6xl font-bold text-white serif mb-6 drop-shadow-2xl">Publications: BOOKS</h2>
           <div className="w-20 md:w-24 h-1.5 bg-indigo-500 mb-8 rounded-full"></div>
-          <p className="text-lg md:text-xl text-indigo-100 font-light max-w-2xl mb-12 italic border-l-4 border-indigo-500/50 pl-6">
+          <p className="text-lg md:text-xl text-indigo-100 font-light max-w-2xl mb-12 italic border-l-4 border-indigo-500/50 pl-6 text-justify">
             Core monographs and academic textbooks documenting major research investigations.
           </p>
           
@@ -274,7 +273,7 @@ const Publications: React.FC = () => {
                </div>
                <div className="md:w-2/3">
                  <h3 className="text-2xl md:text-3xl font-bold text-white serif mb-4">Latest Scholarly Monograph</h3>
-                 <p className="text-slate-300 text-base md:text-lg mb-6 font-light leading-relaxed">
+                 <p className="text-slate-300 text-base md:text-lg mb-6 font-light leading-relaxed text-justify">
                    A comprehensive new investigation into the intersection of global health policy and clinical psychology, addressing modern stressors in diverse populations.
                  </p>
                  <div className="flex gap-4">
@@ -306,7 +305,7 @@ const Publications: React.FC = () => {
                  </a>
                  <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                    <h4 className="text-white font-bold text-[10px] uppercase tracking-widest mb-4 flex items-center gap-2"><List size={14} /> Table of Contents (11 Chapters)</h4>
-                   <ul className="text-[11px] md:text-xs space-y-2 text-slate-300 columns-1 md:columns-2">
+                   <ul className="text-[11px] md:text-xs space-y-2 text-slate-300 columns-1 md:columns-2 text-justify">
                      <li>Setting the Scene (1-14)</li>
                      <li>Patterns & Trends (15-31)</li>
                      <li>Travelling Routes (33-49)</li>
@@ -334,7 +333,7 @@ const Publications: React.FC = () => {
                <div className="md:w-2/3">
                  <h3 className="text-xl md:text-2xl font-bold text-white serif mb-2">I'm an alien in Deutschland</h3>
                  <p className="text-indigo-400 text-sm italic mb-6">A quantitative mental health case study of African Immigrants in Germany</p>
-                 <p className="text-slate-300 text-sm mb-6 leading-relaxed">PeterLang Publishers. ISBN: 978-3-631-59975-4. Includes an epilogue by John W. Berry (Queens University, Canada).</p>
+                 <p className="text-slate-300 text-sm mb-6 leading-relaxed text-justify">PeterLang Publishers. ISBN: 978-3-631-59975-4. Includes an epilogue by John W. Berry (Queens University, Canada).</p>
                </div>
             </div>
 
@@ -350,7 +349,7 @@ const Publications: React.FC = () => {
                </div>
                <div className="md:w-2/3">
                  <h3 className="text-xl md:text-2xl font-bold text-white serif mb-4">Applied Psychology</h3>
-                 <p className="text-slate-300 text-sm leading-relaxed mb-6">Idemudia, E.S. and Shikongo, A. (2005). Applied Psychology (Centre for External Study ed). University of Namibia, Namibia. ISBN: 99916-67-63-6</p>
+                 <p className="text-slate-300 text-sm leading-relaxed mb-6 text-justify">Idemudia, E.S. and Shikongo, A. (2005). Applied Psychology (Centre for External Study ed). University of Namibia, Namibia. ISBN: 99916-67-63-6</p>
                </div>
             </div>
           </div>
@@ -359,7 +358,7 @@ const Publications: React.FC = () => {
         {/* Footer Design Element */}
         <div className="mt-20 text-center pb-10">
            <div className="w-16 h-1 bg-white/10 mx-auto mb-8 rounded-full"></div>
-           <p className="text-indigo-400 text-[10px] uppercase tracking-[0.3em] font-bold">Documenting Over 380 Scientific Contributions</p>
+           <p className="text-indigo-300 text-[10px] uppercase tracking-[0.3em] font-black drop-shadow-md">Documenting Over 380 Scientific Contributions</p>
         </div>
       </div>
     </div>

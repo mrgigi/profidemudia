@@ -58,7 +58,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, isOpen, onClick, c
         } overflow-hidden`}
       >
         <div className="p-6 md:p-12 lg:p-16 bg-slate-900/40 backdrop-blur-2xl rounded-[2.5rem] border border-white/5 shadow-2xl relative">
-          <div className="relative z-10 text-slate-200">
+          <div className="relative z-10 text-slate-200 text-justify">
             {children}
           </div>
         </div>
@@ -136,7 +136,7 @@ const About: React.FC = () => {
             <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none hidden lg:block">
                 <BookOpen size={200} className="text-white" />
             </div>
-            <div className="prose prose-invert prose-lg md:prose-xl max-w-none text-slate-200 leading-relaxed font-light">
+            <div className="prose prose-invert prose-lg md:prose-xl max-w-none text-slate-200 leading-relaxed font-light text-justify">
               <p className="mb-8 first-letter:text-5xl md:first-letter:text-7xl first-letter:font-bold first-letter:text-indigo-400 first-letter:mr-3 first-letter:float-left">
                 He is an Associate Editor with <strong>Heliyon</strong> (The Netherlands) and the <strong>Journal of Child & Adolescent Mental Health</strong> (South Africa). 
                 A Fellow of the Nigerian Psychological Association (NPA), Nigerian Association of Clinical Psychologists (NACP), 
@@ -168,33 +168,33 @@ const About: React.FC = () => {
               <div className="relative pl-8 md:pl-12 border-l-2 border-white/10">
                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-indigo-600 rounded-full shadow-[0_0_10px_rgba(79,70,229,0.3)]"></div>
                 <div className="text-indigo-400 font-bold text-lg mb-2">1992 - 1995</div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 serif">Ph.D. in Clinical Psychology</h3>
-                <p className="text-slate-300 text-lg md:text-xl font-medium mb-4">University of Ibadan, Ibadan, Nigeria</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 serif text-left">Ph.D. in Clinical Psychology</h3>
+                <p className="text-slate-300 text-lg md:text-xl font-medium mb-4 text-left">University of Ibadan, Ibadan, Nigeria</p>
                 <div className="bg-white/5 p-6 md:p-8 rounded-2xl border border-white/5 max-w-3xl">
-                  <p className="text-slate-200 text-base leading-relaxed mb-4"><strong>Cognate:</strong> Forensic/Developmental Psychology</p>
-                  <p className="text-slate-200 text-base leading-relaxed"><strong>Thesis Title:</strong> Psychosocial factors determining psychological disorders among prison inmates in Nigeria: Implications for treatment intervention.</p>
+                  <p className="text-slate-200 text-base leading-relaxed mb-4 text-justify"><strong>Cognate:</strong> Forensic/Developmental Psychology</p>
+                  <p className="text-slate-200 text-base leading-relaxed text-justify"><strong>Thesis Title:</strong> Psychosocial factors determining psychological disorders among prison inmates in Nigeria: Implications for treatment intervention.</p>
                 </div>
               </div>
 
               <div className="relative pl-8 md:pl-12 border-l-2 border-white/10">
                  <div className="absolute -left-[9px] top-0 w-4 h-4 bg-indigo-600 rounded-full"></div>
                  <div className="text-indigo-400 font-bold text-lg mb-2">1996 - 1997</div>
-                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 serif">Leventis Fellow</h3>
-                 <p className="text-slate-300 text-lg md:text-xl font-medium">SOAS, University College London, UK</p>
+                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 serif text-left">Leventis Fellow</h3>
+                 <p className="text-slate-300 text-lg md:text-xl font-medium text-left">SOAS, University College London, UK</p>
               </div>
 
               <div className="relative pl-8 md:pl-12 border-l-2 border-white/10">
                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-indigo-600 rounded-full"></div>
                 <div className="text-indigo-400 font-bold text-lg mb-2">1988 - 1990</div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 serif">M.Sc. Clinical Psychology</h3>
-                <p className="text-slate-300 text-lg md:text-xl font-medium mb-4">University of Ibadan, Ibadan, Nigeria</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 serif text-left">M.Sc. Clinical Psychology</h3>
+                <p className="text-slate-300 text-lg md:text-xl font-medium mb-4 text-left">University of Ibadan, Ibadan, Nigeria</p>
               </div>
 
               <div className="relative pl-8 md:pl-12 border-l-2 border-white/10">
                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-indigo-600 rounded-full"></div>
                 <div className="text-indigo-400 font-bold text-lg mb-2">1983 - 1986</div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 serif">B.Sc. Psychology (Honors)</h3>
-                <p className="text-slate-300 text-lg md:text-xl font-medium mb-4">University of Ibadan, Ibadan, Nigeria</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 serif text-left">B.Sc. Psychology (Honors)</h3>
+                <p className="text-slate-300 text-lg md:text-xl font-medium mb-4 text-left">University of Ibadan, Ibadan, Nigeria</p>
               </div>
             </div>
           </AccordionItem>
@@ -206,19 +206,19 @@ const About: React.FC = () => {
             onClick={() => toggleSection('Research Interests')}
           >
             <div className="max-w-none text-slate-200 leading-relaxed font-light">
-              <h4 className="text-xl md:text-2xl font-bold text-indigo-400 serif mb-6 uppercase tracking-tight">RESEARCH SYNOPSIS</h4>
+              <h4 className="text-xl md:text-2xl font-bold text-indigo-400 serif mb-6 uppercase tracking-tight text-left">RESEARCH SYNOPSIS</h4>
               
-              <p className="mb-10 text-lg md:text-xl italic text-slate-100 border-l-4 border-indigo-600 pl-6 md:pl-8 py-2 bg-white/5 rounded-r-xl">
+              <p className="mb-10 text-lg md:text-xl italic text-slate-100 border-l-4 border-indigo-600 pl-6 md:pl-8 py-2 bg-white/5 rounded-r-xl text-justify">
                 My research focus has been to engage in preventive and action research including psychological intervention programmes as demonstrated in my Ph.D. thesis.
               </p>
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 text-left">
                 <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10 hover:bg-white/10 transition-all flex flex-col h-full">
                     <div className="p-4 bg-indigo-600 rounded-2xl shadow-lg w-fit mb-6 text-white">
                       <Microscope size={28} />
                     </div>
                     <h3 className="text-xl font-bold text-white serif mb-4">1. Prison & Vulnerable Clinical Issues</h3>
-                    <p className="text-sm text-slate-300 leading-relaxed">
+                    <p className="text-sm text-slate-300 leading-relaxed text-justify">
                       Applying clinical psychopathology and therapeutic interventions within prisons. Developing psychological instruments for prisoners to support the Nigerian Prison System.
                     </p>
                 </div>
@@ -228,7 +228,7 @@ const About: React.FC = () => {
                       <Users size={28} />
                     </div>
                     <h3 className="text-xl font-bold text-white serif mb-4">2. African-Oriented Interventions</h3>
-                    <p className="text-sm text-slate-300 leading-relaxed">
+                    <p className="text-sm text-slate-300 leading-relaxed text-justify">
                       Developing intervention methods rooted in African cultural knowledge. Understanding trauma, stress, and health through ideologies from the African continent.
                     </p>
                 </div>
@@ -238,15 +238,15 @@ const About: React.FC = () => {
                       <Globe size={28} />
                     </div>
                     <h3 className="text-xl font-bold text-white serif mb-4">3. Global Cultural Schizophrenia</h3>
-                    <p className="text-sm text-slate-300 leading-relaxed">
+                    <p className="text-sm text-slate-300 leading-relaxed text-justify">
                       International collaborations studying schizophrenia across cultures in Europe, Asia, and Africa with colleagues from over 10 countries.
                     </p>
                 </div>
               </div>
 
-              <div className="bg-indigo-900/40 backdrop-blur-xl text-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/10 mb-16">
+              <div className="bg-indigo-900/40 backdrop-blur-xl text-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/10 mb-16 text-left">
                 <h4 className="text-xl md:text-2xl font-bold mb-6 serif border-b border-white/20 pb-4">Professional Standing</h4>
-                <p className="text-indigo-100 text-lg leading-relaxed mb-6">
+                <p className="text-indigo-100 text-lg leading-relaxed mb-6 text-justify">
                   My research is a blend of clinical, health and applied psychology. These studies have attracted prestigious academic awards and fellowships globally.
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
@@ -264,7 +264,7 @@ const About: React.FC = () => {
             isOpen={openSections.includes('Awards')} 
             onClick={() => toggleSection('Awards')}
           >
-            <div className="space-y-16">
+            <div className="space-y-16 text-left">
               <div className="relative">
                 <h3 className="text-xl md:text-2xl font-bold text-indigo-400 mb-10 serif flex items-center gap-3">
                   <Award size={24} /> Career Milestones (1992 - 2018)
@@ -277,7 +277,7 @@ const About: React.FC = () => {
                       </div>
                       <ul className="space-y-3">
                         {period.items.map((item, i) => (
-                          <li key={i} className="flex gap-3 items-start text-slate-300 text-xs md:text-sm leading-relaxed">
+                          <li key={i} className="flex gap-3 items-start text-slate-300 text-xs md:text-sm leading-relaxed text-justify">
                             <CheckCircle2 size={14} className="text-indigo-400 mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
@@ -303,7 +303,7 @@ const About: React.FC = () => {
                       </div>
                       <ul className="space-y-3">
                         {yearData.items.map((item, i) => (
-                          <li key={i} className="flex gap-2 items-start text-xs leading-tight text-slate-300">
+                          <li key={i} className="flex gap-2 items-start text-xs leading-tight text-slate-300 text-justify">
                              <div className="mt-1.5 w-1 h-1 rounded-full bg-indigo-500 flex-shrink-0"></div>
                              <span>{item}</span>
                           </li>
@@ -322,7 +322,7 @@ const About: React.FC = () => {
             isOpen={openSections.includes('Societies')} 
             onClick={() => toggleSection('Societies')}
           >
-            <div className="relative">
+            <div className="relative text-left">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12 pb-6 border-b border-white/10">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-indigo-600 rounded-2xl shadow-lg">
@@ -345,7 +345,7 @@ const About: React.FC = () => {
                     <span className="text-[10px] font-bold text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded border border-indigo-500/20 mt-0.5 w-24 text-center flex-shrink-0">
                       {item.year}
                     </span>
-                    <span className="text-slate-200 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">
+                    <span className="text-slate-200 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors text-justify">
                       {item.title}
                     </span>
                   </div>
@@ -358,7 +358,7 @@ const About: React.FC = () => {
         {/* FOOTER CTA SECTION */}
         <div className="mt-20 text-center px-4">
             <div className="w-24 h-1 bg-white/20 mx-auto mb-10 rounded-full"></div>
-            <p className="text-slate-100 text-sm italic mb-8 drop-shadow-lg font-medium">For a comprehensive list of all scientific contributions and detailed career history, please download the full curriculum vitae.</p>
+            <p className="text-slate-100 text-sm italic mb-8 drop-shadow-lg font-medium text-justify max-w-2xl mx-auto">For a comprehensive list of all scientific contributions and detailed career history, please download the full curriculum vitae.</p>
             <a 
                 href={CV_DOWNLOAD_LINK} 
                 className="inline-flex items-center gap-3 border-2 border-white/40 text-white hover:bg-white hover:text-slate-950 px-8 md:px-12 py-4 md:py-5 rounded-full font-bold transition-all group text-sm md:text-base bg-slate-900/40 backdrop-blur-md"

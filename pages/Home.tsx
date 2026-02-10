@@ -76,7 +76,7 @@ const Home: React.FC = () => {
               <h1 className="text-4xl md:text-6xl font-bold mb-4 serif drop-shadow-md leading-tight">{PROFESSOR_INFO.name}</h1>
               <p className="text-lg md:text-xl text-indigo-100 mb-8 font-light tracking-wide italic border-l-4 border-indigo-500 pl-4">{PROFESSOR_INFO.title}</p>
               
-              <div className="space-y-6 text-slate-200 leading-relaxed mb-10 text-lg font-light">
+              <div className="space-y-6 text-slate-200 leading-relaxed mb-10 text-lg font-light text-justify">
                 <p className="drop-shadow-sm">{PROFESSOR_INFO.bio}</p>
               </div>
 
@@ -243,7 +243,7 @@ const Home: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent flex items-end p-8 md:p-16 pointer-events-none">
                 <div className="max-w-3xl pointer-events-auto">
                   <h3 className="text-3xl md:text-5xl font-bold mb-6 serif drop-shadow-lg leading-tight">Psychology in a <br/>Globalized Context</h3>
-                  <p className="text-indigo-100 mb-10 text-lg leading-relaxed hidden md:block drop-shadow-md max-w-xl font-light">
+                  <p className="text-indigo-100 mb-10 text-lg leading-relaxed hidden md:block drop-shadow-md max-w-xl font-light text-justify">
                     A defining academic milestone exploring human behavior through the lens of cultural psychology and clinical research in Southern Africa.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">

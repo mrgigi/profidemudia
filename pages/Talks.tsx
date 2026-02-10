@@ -8,11 +8,11 @@ const Talks: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Header Section */}
-        <div className="mb-16">
+        <div className="mb-16 text-left">
           <span className="text-indigo-400 font-semibold tracking-widest uppercase text-xs mb-3 block">Professional Presentations</span>
           <h1 className="text-3xl md:text-6xl font-bold text-white serif mb-6 drop-shadow-2xl uppercase">Invited Talks</h1>
           <div className="w-20 md:w-24 h-1.5 bg-indigo-500 mb-8 rounded-full"></div>
-          <p className="text-lg md:text-xl text-indigo-100 font-light max-w-3xl leading-relaxed italic border-l-4 border-indigo-500/50 pl-6">
+          <p className="text-lg md:text-xl text-indigo-100 font-light max-w-3xl leading-relaxed italic border-l-4 border-indigo-500/50 pl-6 text-justify">
             A comprehensive record of keynote addresses, workshop presentations, and expert seminars delivered at leading international academic forums.
           </p>
         </div>
@@ -33,7 +33,7 @@ const Talks: React.FC = () => {
               <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-indigo-600 rounded-full border-4 border-slate-950 shadow-xl z-10 hidden md:block transform -translate-x-1/2"></div>
               
               {/* Content Card */}
-              <div className="w-full md:w-[45%]">
+              <div className="w-full md:w-[45%] text-left">
                 <div className="bg-slate-900/60 backdrop-blur-xl rounded-[2rem] border border-white/10 p-6 md:p-10 shadow-2xl hover:bg-white/10 transition-all group">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="p-2 bg-indigo-600 rounded-lg text-white group-hover:scale-110 transition-transform shadow-lg">
@@ -48,7 +48,7 @@ const Talks: React.FC = () => {
                   
                   <div className="flex items-start gap-3 text-slate-300 text-sm md:text-base">
                     <MapPin size={18} className="text-indigo-500 flex-shrink-0 mt-1" />
-                    <p className="italic font-light">{talk.venue}</p>
+                    <p className="italic font-light text-justify">{talk.venue}</p>
                   </div>
 
                   <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
@@ -71,7 +71,7 @@ const Talks: React.FC = () => {
         {/* Footer Note */}
         <div className="mt-24 text-center">
           <div className="w-16 h-1 bg-white/10 mx-auto mb-8 rounded-full"></div>
-          <p className="text-indigo-400 text-[10px] uppercase tracking-[0.3em] font-bold">Documenting Three Decades of Scientific Discourse</p>
+          <p className="text-indigo-300 text-[10px] uppercase tracking-[0.3em] font-black drop-shadow-md">Documenting Three Decades of Scientific Discourse</p>
         </div>
       </div>
     </div>
