@@ -374,6 +374,9 @@ const About: React.FC = () => {
                 <Download size={20} className="group-hover:animate-bounce" />
                 Access Full Dossier
             </a>
+            <div className="mt-12">
+               <p className="text-indigo-400 text-[10px] uppercase tracking-[0.3em] font-bold">Documenting Over 380 Scientific Contributions</p>
+            </div>
         </div>
       </div>
     </div>

@@ -71,7 +71,7 @@ const Talks: React.FC = () => {
         {/* Footer Note */}
         <div className="mt-24 text-center">
           <div className="w-16 h-1 bg-white/10 mx-auto mb-8 rounded-full"></div>
-          <p className="text-slate-500 text-[10px] uppercase tracking-[0.3em] font-bold">Documenting Three Decades of Scientific Discourse</p>
+          <p className="text-indigo-400 text-[10px] uppercase tracking-[0.3em] font-bold">Documenting Three Decades of Scientific Discourse</p>
         </div>
       </div>
     </div>

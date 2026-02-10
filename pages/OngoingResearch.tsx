@@ -122,7 +122,8 @@ const OngoingResearch: React.FC = () => {
                 Research findings have been referenced in <strong>11 World policy documents</strong> including reports by the 
                 International Organization for Migration (IOM) in Portuguese, Russian, and Swahili.
             </p>
-            <div className="w-12 h-1 bg-indigo-500/30 mx-auto mt-12 rounded-full"></div>
+            <div className="w-12 h-1 bg-white/10 mx-auto mt-12 rounded-full"></div>
+            <p className="text-indigo-400 text-[10px] uppercase tracking-[0.3em] font-bold mt-8">Documenting Over 380 Scientific Contributions</p>
         </div>
       </div>
     </div>
