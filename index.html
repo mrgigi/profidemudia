@@ -29,39 +29,40 @@
     <meta property="twitter:description" content="Distinguished Professor of Clinical Psychology. Explore a lifetime of research in global health, trauma, and cultural psychology.">
     <meta property="twitter:image" content="https://static.wixstatic.com/media/bb7d0d_cdb2b375cb8b47029456d03c808b825f~mv2.jpg/v1/crop/x_0,y_20,w_682,h_828/fill/w_682,h_828,fp_0.50_0.50,q_85,enc_avif,quality_auto/WhatsApp%20Image%202024-02-01%20at%2017_55_15_3966f98b.jpg">
 
-    <!-- Standard SEO -->
-    <link rel="canonical" href="https://erhabor-idemudia.github.io/" />
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
+        html {
             background-color: #0f172a;
         }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: transparent;
+        }
+
         /* 
-           FIX: Using a fixed position element instead of background-attachment: fixed.
-           This is the "World Class" way to have a fixed background on mobile that:
-           1. Covers the entire site (not just the header).
-           2. Doesn't zoom in/out on mobile scroll.
-           3. Works smoothly across all browsers.
+           UNIVERSAL BACKGROUND LAYER
+           Using position: fixed on a pseudo-element is the most reliable way 
+           to ensure the background is always present, doesn't scroll away, 
+           and maintains its aspect ratio correctly on both mobile and desktop.
         */
-        .site-bg-overlay {
+        body::before {
+            content: '';
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
+            /* Using the requested background image */
             background-image: url('https://static.wixstatic.com/media/a394701f8d754f4685e5578bda5e0df9.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            z-index: -1;
+            z-index: -10; /* Far back behind all content */
             pointer-events: none;
             /* Performance optimizations */
             will-change: transform;
@@ -77,14 +78,25 @@
           width: 8px;
         }
         ::-webkit-scrollbar-track {
-          background: rgba(15, 23, 42, 0.1);
+          background: rgba(15, 23, 42, 0.2);
         }
         ::-webkit-scrollbar-thumb {
-          background: rgba(99, 102, 241, 0.4);
+          background: rgba(99, 102, 241, 0.5);
           border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-          background: rgba(99, 102, 241, 0.6);
+          background: rgba(99, 102, 241, 0.7);
+        }
+
+        /* Ensure smooth transitions between page loads */
+        .page-enter {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .page-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 300ms, transform 300ms;
         }
     </style>
 <script type="importmap">
@@ -101,10 +113,7 @@
 }
 </script>
 </head>
-<body class="text-slate-900">
-    <!-- The persistent fixed background layer -->
-    <div class="site-bg-overlay"></div>
-    
+<body class="text-slate-900 overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
 </body>
