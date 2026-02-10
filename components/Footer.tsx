@@ -87,7 +87,14 @@ const Footer: React.FC = () => {
 
       <div className="container mx-auto px-6 mt-10 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest opacity-40 text-center md:text-left">
         <p>&copy; 2026 Professor Idemudia Erhabor. All rights reserved.</p>
-        <p className="mt-4 md:mt-0 font-medium">Academic Research Excellence Portfolio</p>
+        <a 
+          href="http://www.gigimobile.co.za" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="mt-4 md:mt-0 font-medium hover:text-indigo-400 transition-colors"
+        >
+          Designed with ❤️ from Gigimobile Tech Solutions™
+        </a>
       </div>
     </footer>
   );

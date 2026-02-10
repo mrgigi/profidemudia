@@ -1,9 +1,18 @@
+
 import React from 'react';
 import { NavItem, StatItem, Award } from './types';
 
 export const THEME_IMAGE = "https://static.wixstatic.com/media/a394701f8d754f4685e5578bda5e0df9.jpg";
 export const BANNER_IMAGE = THEME_IMAGE;
 export const PORTRAIT_IMAGE = "https://static.wixstatic.com/media/bb7d0d_cdb2b375cb8b47029456d03c808b825f~mv2.jpg/v1/crop/x_0,y_20,w_682,h_828/fill/w_682,h_828,fp_0.50_0.50,q_85,enc_avif,quality_auto/WhatsApp%20Image%202024-02-01%20at%2017_55_15_3966f98b.jpg";
+
+export const PORTRAIT_IMAGES = [
+  PORTRAIT_IMAGE,
+  "https://static.wixstatic.com/media/bb7d0d_06aa213781bb4ad6920d02eb7e66315e~mv2.jpg",
+  "https://static.wixstatic.com/media/bb7d0d_d8f34ac4b5874ea3b19fc088b280dc9b~mv2.jpg",
+  "https://static.wixstatic.com/media/bb7d0d_fe9245aa8da548e5a9456778a16e9174~mv2.jpg"
+];
+
 export const ABOUT_HEADER_IMAGE = "https://static.wixstatic.com/media/bb7d0d_393e1d764824412e9d1fe6f8fb366b8c~mv2.jpg/v1/fill/w_980,h_702,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG-20240201-WA0033.jpg";
 export const SECTION_BG_IMAGE = "https://static.wixstatic.com/media/11062b_20c28478658b408cb6c6b0fd52f0077e~mv2_d_3695_2077_s_2.jpg/v1/fill/w_160,h_90,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_20c28478658b408cb6c6b0fd52f0077e~mv2_d_3695_2077_s_2.jpg";
 export const CV_DOWNLOAD_LINK = "https://134a3cc0-dad9-44eb-843f-eb9f78354590.filesusr.com/ugd/bb7d0d_4881f7d6607e401b920ffd8bc6ccc45b.docx?dn=Erhabor%20Idemudia%20CV%20%2017%20Nov%202023%20please%20update%20Latest.docx";
@@ -96,7 +105,7 @@ export const HISTORIC_AWARDS = [
   { period: "1992-1995", items: ["CODESRIA Laureate - 1992", "Awardee, CODESRIA grant for thesis writing (Ph.D.)", "Awardee, University of Ibadan Senate research grant"] },
   { period: "1996-1997", items: ["Fellow, Centre for African Studies, London, United Kingdom"] },
   { period: "1998-1999", items: ["Awardee, Postgraduate School conference grants for PG Teachers"] },
-  { period: "2000-2002", items: ["Fellow, CODESRIA, Dakar, Senegal", "Awardee, CODESRIA grant for Child and youths studies programme"] },
+  { period: "2000-2002", items: ["Fellow, CODESRIA, Dakar, Senegal", "Awardee, CODESRIA grant for child and youths studies programme"] },
   { period: "2001-2002", items: ["Awardee, IFRA Urban studies/Security Studies Grant"] },
   { period: "2002-2003", items: ["Awardee, Salzburg Seminar Austria", "Fellow, Salzburg Seminar (Equity in Health)", "Certificate of excellence for counselling & psychotherapy practice in Africa - NACP"] },
   { period: "2003-2005", items: ["Alexander Von Humboldt Stiftung (AvH) Research Scholarship, Germany", "Fellow, Alexander Von Humboldt Stiftung (AvH) Germany", "Alexander Von Humboldt Language scholarship, Germany", "Awardee/Fellow Albert Ellis Institute, USA", "Best Poster Certificate, IACCP 6th European Regional Congress (Budapest-Hungary)", "Graduate Basis for Registration, British Psychological Society"] },

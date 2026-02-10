@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { ExternalLink, Award as AwardIcon, Download, ChevronRight, Maximize2, PlayCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ImageModal from '../components/ImageModal';
 import { 
   PROFESSOR_INFO, 
   IMPACT_STATS, 
-  PORTRAIT_IMAGE, 
+  PORTRAIT_IMAGES, 
   SOCIAL_LINKS, 
   GALLERY_IMAGES, 
   IMPACT_IMAGES, 
@@ -15,6 +16,14 @@ import {
 
 const Home: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [portraitIndex, setPortraitIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPortraitIndex((prev) => (prev + 1) % PORTRAIT_IMAGES.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   const openImage = (src: string) => setSelectedImage(src);
   const closeImage = () => setSelectedImage(null);
@@ -32,21 +41,37 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="w-full lg:w-2/5 xl:w-1/3">
-              <div 
-                className="relative group max-w-sm mx-auto lg:max-w-none cursor-pointer"
-                onClick={() => openImage(PORTRAIT_IMAGE)}
-              >
-                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-                <img 
-                  src={PORTRAIT_IMAGE} 
-                  alt={PROFESSOR_INFO.name} 
-                  className="relative rounded-2xl w-full shadow-2xl border border-white/10 object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-2xl">
-                  <Maximize2 className="text-white" size={32} />
+              <div className="relative max-w-sm mx-auto lg:max-w-none pointer-events-none">
+                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-20 transition duration-1000"></div>
+                
+                {/* Image Container with Fade Effect - Fixed aspect ratio for visibility */}
+                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10 bg-slate-800">
+                  {PORTRAIT_IMAGES.map((src, idx) => (
+                    <img 
+                      key={src}
+                      src={src} 
+                      alt={PROFESSOR_INFO.name} 
+                      className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 ease-in-out ${
+                        idx === portraitIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                {/* Navigation Dots for Slideshow */}
+                <div className="flex justify-center gap-2 mt-4 pointer-events-auto">
+                  {PORTRAIT_IMAGES.map((_, idx) => (
+                    <div 
+                      key={idx} 
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        idx === portraitIndex ? 'w-6 bg-indigo-500' : 'w-2 bg-white/20'
+                      }`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
+            
             <div className="w-full lg:w-3/5 xl:w-2/3 text-white">
               <span className="text-indigo-400 font-semibold tracking-widest uppercase text-xs mb-3 block">Distinguished Professor</span>
               <h1 className="text-4xl md:text-6xl font-bold mb-4 serif drop-shadow-md leading-tight">{PROFESSOR_INFO.name}</h1>
@@ -84,7 +109,7 @@ const Home: React.FC = () => {
             <div className="w-16 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {GALLERY_IMAGES.slice(0, 4).map((img, idx) => (
+            {GALLERY_IMAGES.map((img, idx) => (
               <div 
                 key={idx} 
                 className="overflow-hidden rounded-3xl shadow-2xl aspect-[4/3] relative group border border-white/10 cursor-pointer"

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { 
   Download, 
@@ -108,22 +109,14 @@ const About: React.FC = () => {
         
         {/* TOP SECTION: Header & Intro */}
         <div className="mb-12">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-12 group border border-white/10">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-12 border border-white/10">
             <img 
               src={ABOUT_HEADER_IMAGE} 
               alt="Professor Erhabor Sunday Idemudia" 
-              className="w-full h-[350px] md:h-[600px] lg:h-[750px] object-cover transition-transform duration-1000 group-hover:scale-105 cursor-pointer"
-              onClick={() => setSelectedImage(ABOUT_HEADER_IMAGE)}
+              className="w-full h-[350px] md:h-[600px] lg:h-[750px] object-cover transition-transform duration-1000"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-            <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
-               <button 
-                onClick={() => setSelectedImage(ABOUT_HEADER_IMAGE)}
-                className="bg-white/20 backdrop-blur-md p-3 rounded-full text-white hover:bg-white/40 transition-all"
-               >
-                 <Maximize2 size={24} />
-               </button>
-            </div>
+            
             <div className="absolute bottom-6 left-6 right-6 md:bottom-12 md:left-12 md:right-12 flex flex-col md:flex-row justify-between items-end gap-6 pointer-events-none">
               <div className="max-w-2xl pointer-events-auto text-left w-full">
                 <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white serif mb-3 drop-shadow-2xl">About Me</h1>
