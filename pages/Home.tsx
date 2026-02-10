@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ExternalLink, Award as AwardIcon, Download, ChevronRight, Maximize2, PlayCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -265,7 +264,7 @@ const Home: React.FC = () => {
           
           <div className="mt-20 text-center pb-10">
             <div className="w-16 h-1 bg-white/10 mx-auto mb-8 rounded-full"></div>
-            <p className="text-indigo-400 text-[10px] uppercase tracking-[0.3em] font-bold">Documenting Over 380 Scientific Contributions</p>
+            <p className="text-indigo-300 text-[10px] uppercase tracking-[0.3em] font-black drop-shadow-md">Documenting Over 380 Scientific Contributions</p>
           </div>
         </div>
       </section>

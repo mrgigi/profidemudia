@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { 
   Download, 
@@ -358,17 +357,17 @@ const About: React.FC = () => {
 
         {/* FOOTER CTA SECTION */}
         <div className="mt-20 text-center px-4">
-            <div className="w-24 h-1 bg-white/10 mx-auto mb-10 rounded-full"></div>
-            <p className="text-slate-400 text-sm italic mb-8">For a comprehensive list of all scientific contributions and detailed career history, please download the full curriculum vitae.</p>
+            <div className="w-24 h-1 bg-white/20 mx-auto mb-10 rounded-full"></div>
+            <p className="text-slate-100 text-sm italic mb-8 drop-shadow-lg font-medium">For a comprehensive list of all scientific contributions and detailed career history, please download the full curriculum vitae.</p>
             <a 
                 href={CV_DOWNLOAD_LINK} 
-                className="inline-flex items-center gap-3 border-2 border-white/20 text-white hover:bg-white hover:text-slate-950 px-8 md:px-12 py-4 md:py-5 rounded-full font-bold transition-all group text-sm md:text-base"
+                className="inline-flex items-center gap-3 border-2 border-white/40 text-white hover:bg-white hover:text-slate-950 px-8 md:px-12 py-4 md:py-5 rounded-full font-bold transition-all group text-sm md:text-base bg-slate-900/40 backdrop-blur-md"
             >
                 <Download size={20} className="group-hover:animate-bounce" />
                 Access Full Dossier
             </a>
             <div className="mt-12">
-               <p className="text-indigo-400 text-[10px] uppercase tracking-[0.3em] font-bold">Documenting Over 380 Scientific Contributions</p>
+               <p className="text-indigo-300 text-[10px] uppercase tracking-[0.3em] font-black drop-shadow-md">Documenting Over 380 Scientific Contributions</p>
             </div>
         </div>
       </div>
