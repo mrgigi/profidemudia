@@ -1,0 +1,8 @@
+{
+  "name": "Professor Erhabor's Site.",
+  "description": "Professor Erhabor's Site.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
