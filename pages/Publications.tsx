@@ -254,7 +254,7 @@ const Publications: React.FC = () => {
 
         {/* PUBLICATIONS: BOOKS Visual Section (KEEPING EXISTING CUSTOM VISUALS) */}
         <div className="mt-32 mb-16 text-left">
-          <h2 className="text-3xl md:text-6xl font-bold text-white serif mb-6 drop-shadow-2xl">Publications: BOOKS</h2>
+          <h2 className="text-3xl md:text-6xl font-bold text-white serif mb-6 drop-shadow-2xl">Publications: Books</h2>
           <div className="w-20 md:w-24 h-1.5 bg-indigo-500 mb-8 rounded-full"></div>
           <p className="text-lg md:text-xl text-indigo-100 font-light max-w-2xl mb-12 italic border-l-4 border-indigo-500/50 pl-6 text-justify">
             Core monographs and academic textbooks documenting major research investigations.

@@ -86,7 +86,7 @@ const ScrollText = ({ className, size }: { className?: string, size?: number }) 
 
 const About: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [openSections, setOpenSections] = useState<string[]>(['Education', 'Research Interests']);
+  const [openSections, setOpenSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
     setOpenSections(prev => 
